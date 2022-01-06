@@ -1,11 +1,20 @@
 package commons;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
+
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
+
 import static commons.Config.PLATFORM_AND_BROWSER;
 import static constants.Constant.TimeoutVariables.IMPLICIT_WAIT;
 
@@ -24,7 +33,6 @@ public class CommonActions {
                 break;
             case "FIREFOX_WINDOWS":
                 driver = new FirefoxDriver();
-                break;
             case "INTERNET_EXPLORER_WINDOWS":
                 driver = new InternetExplorerDriver();
             default:
@@ -33,7 +41,8 @@ public class CommonActions {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
     }
-    public static WebDriver getDriver(){
+
+    public static WebDriver getDriver() {
         return driver;
     }
 }

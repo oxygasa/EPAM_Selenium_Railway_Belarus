@@ -8,7 +8,7 @@ public class Config {
      * FIREFOX_WINDOWS
      * INTERNET_EXPLORER_WINDOWS
      **/
-    public static final String PLATFORM_AND_BROWSER = "CHROME_WINDOWS";
+    public static final String PLATFORM_AND_BROWSER = "INTERNET_EXPLORER_WINDOWS";
     /** Clear all cookies and cache after each interation.*/
     public static final Boolean CLEAR_COOKIES = true;
     /** To keep browser open after all tests.*/
