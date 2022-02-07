@@ -19,7 +19,7 @@ public class RwMainPage extends BasePage {
     private final By TRAIN_SEARCH_DATE_FIELD = By.id("yDate");
     private final By TRAIN_SEARCH_SUBMIT_BUTTON = By.xpath("//span[@class='std-button']//input[@type='submit']");
     private final List<WebElement> MAIN_PAGE_NEWS_MODULE_WITH_NEWS_LIST = CommonActions.getDriver().findElements(By.xpath("//dt[contains(@id,'bx_1373509569')]"));
-    private final By TRAIN_SEARSH_TEXT_FIELD_FROM_AFTER_CLICK_ON_LOGO = By.id("one-way-raspFormFromTitle");
+    private final By TRAIN_SEARCH_TEXT_FIELD_FROM_AFTER_CLICK_ON_LOGO = By.id("one-way-raspFormFromTitle");
     public String getCityDepartureFrom() {
         return "Минск-Пассажирский";
     }
@@ -54,7 +54,7 @@ public class RwMainPage extends BasePage {
         return MAIN_PAGE_NEWS_MODULE_WITH_NEWS_LIST;
     }
     public By getTrainSearshTextFieldFromAfterClickOnLogo() {
-        return TRAIN_SEARSH_TEXT_FIELD_FROM_AFTER_CLICK_ON_LOGO;
+        return TRAIN_SEARCH_TEXT_FIELD_FROM_AFTER_CLICK_ON_LOGO;
     }
 }
 

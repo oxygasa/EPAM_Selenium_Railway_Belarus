@@ -1,18 +1,11 @@
 package commons;
 
-import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
-import org.openqa.selenium.remote.BrowserType;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 
-import java.net.URISyntaxException;
-import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 import static commons.Config.PLATFORM_AND_BROWSER;
@@ -22,7 +15,7 @@ import static constants.Constant.TimeoutVariables.IMPLICIT_WAIT;
 public class CommonActions {
     private static WebDriver driver;
 
-    /**
+    /*
      *This is a browser setup methods.
      * Choose your properties only via file "src/main/java/commons/Config"
      **/
@@ -33,8 +26,10 @@ public class CommonActions {
                 break;
             case "FIREFOX_WINDOWS":
                 driver = new FirefoxDriver();
+                break;
             case "INTERNET_EXPLORER_WINDOWS":
                 driver = new InternetExplorerDriver();
+                break;
             default:
                 Assert.fail("Incorrect browser name. Choose name of browser in src/main/java/commons/Config Browser name for now is: " + PLATFORM_AND_BROWSER);
         }
