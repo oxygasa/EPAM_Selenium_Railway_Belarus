@@ -8,7 +8,6 @@ import pages.google.GoogleResultListPage;
 import pages.rw.main.RwMainPage;
 import tests.base.BaseTest;
 
-
 public class PositiveGoogleSearchTest extends BaseTest {
     GoogleMainPage googleMainPage = new GoogleMainPage(getDriver());
     GoogleResultListPage googleResultListPage = new GoogleResultListPage(getDriver());
